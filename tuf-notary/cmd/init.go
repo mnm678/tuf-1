@@ -17,7 +17,7 @@ Options:
 }
 
 func cmdInit(args map[string]interface{})error {
-	repository := "tuf-repo"
+	repository :="tuf-repo"
 	if r := args["--repo"]; r != nil {
 		repository = r.(string)
 	}
