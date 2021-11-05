@@ -13,7 +13,6 @@ jobs:
         uses: actions/setup-go@v2
         with:
           go-version: ${{ matrix.go }}
-      - name: Format
-        run: go fmt ./tuf-notary
+      - run: go fmt ./tuf-notary
       - name: Test
         run: go test ./tuf-notary
