@@ -1,12 +1,11 @@
-on: [push, pull_request]
 name: build
+on: [push, pull_request]
 jobs:
   build:
     strategy:
       matrix:
         go: ['1.17', '1.16', '1.15']
-        os: [macos-latest, ubuntu-latest]
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
       - - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - uses: actions/checkout@v2
